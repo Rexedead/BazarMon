@@ -1,0 +1,36 @@
+html {
+    width: 639px;
+}
+
+td {
+    text-align: center !important;
+    vertical-align: middle !important;
+}
+body{
+    background-color: #f8f9fa!important;
+}
+
+th a {
+    text-decoration: none; 
+    text-overflow: ellipsis; 
+    display: block; 
+    overflow: hidden; 
+    white-space: nowrap;
+    width: 213px; 
+}
+
+.popHead {
+    background-color: #f8f9fa!important;
+    color: #666666;
+    font-weight: bold;
+    cursor: default;
+}
+
+.table tr.is-selected {
+    background-color: #66BB6A!important;
+    color: #fff;
+}
+
+
+
+

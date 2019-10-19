@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link rel="stylesheet" href="./css/bulma.css" />
+  <link rel="stylesheet" href="./css/switch.css" />
+  <link rel="stylesheet" href="./css/options.css" />
+</head>
+
+<body>
+  <section class="section">
+    <div class="container has-text-centered">
+      <div class="columns">
+        <div class="column is-three-quarters">
+          <div class="buttons">
+            <button id="addInput" class="button is-primary is-small tooltip is-tooltip-right" data-tooltip="You must input GAME ID, not OFFER id">Add game</button>
+            <button id="getMyWList" class="button is-info is-small">
+              Get my BazarWL
+            </button>
+            <button id="save" class="button is-success is-small">Save</button>
+            <button id="clear" class="button is-danger is-small">Remove All</button>
+          </div>
+          <div id="input-segments"></div>
+        </div>
+        <div class="column has-text-left">
+          <h5 class="title is-5">Settings</h5>
+          <div id="settings-segments ">
+            <div class="field">
+              <input id="autoBump" type="checkbox" class="switch is-success">
+              <label for="autoBump">Enable AutoBump feature</label>
+            </div>
+            <div class="field has-addons">
+              <div class="control">
+                <input id="alertValueOption" class="input is-small" type="number" placeholder="0.50">
+              </div>
+              <div class="control">
+                <a id="setAlert" class="button is-info is-small">
+                  Set all alerts to this value
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+  </section>
+</body>
+<footer id="footer">
+  <footer class="footer">
+    <div class="content has-text-centered">
+      
+        <a href="https://github.com/Rexedead/BazarMon" target="_blank">
+          <img src="./images/github.svg" width="30" alt="github" />
+        </a>
+      <a href="https://bulma.io" target="_blank">
+        <img src="./images/made-with-bulma.png" alt="Made with Bulma" width="151" height="30" />
+      </a>
+      <a href="https://steamcommunity.com/tradeoffer/new/?partner=22861895&token=GtBPPaCq" target="_blank">
+        <img src="./images/donut.svg" width="30"  alt="donut" />
+      </a>
+    
+    </div>
+  </footer>
+
+  </div>
+  <script src="options.js"></script>
+</footer>
+
+</html>

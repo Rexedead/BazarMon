@@ -1,0 +1,48 @@
+html {
+    background-color: #f8f9fa !important;
+}
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+#input-segments {
+    padding: 0px 0px 10px 0px;
+}
+
+#alertValueOption{
+    width: 60px;
+}
+
+#footer a {
+    margin-left: 15px;
+}
+
+
+/* .input-segment-item {
+    margin-bottom: -1.1rem !important;
+} */
+
+.input-segment-item:hover{
+    background-color: #dddddd;
+}
+
+.save-block {
+    padding-top: 2rem;
+}
+
+.closeButton {
+    cursor: pointer;
+}
+
+.divGameIdInput {
+    max-width: 70px;
+    margin-right: 10px;
+}
+
+.divAlertInput {
+    max-width: 50px;
+    margin-right: 10px;
+}
