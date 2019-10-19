@@ -36,17 +36,26 @@ function loadMyOffers(count) {
                 .then(res => res.text())
                 .then(bd => {
                     var bumpArr = parseBumpLinks(bd);
-                    var endId = bumpArr[0].pathname.substr(bumpArr[0].pathname.lastIndexOf('/') + 1);
-                    for (let index = 0; index < bumpArr.length; index++) {
-                        if (index == 0) getcsfr("https://bazar.lowcygier.pl/offer/update/" + endId)
-                        bumpSetOffers.add("https://bazar.lowcygier.pl" + bumpArr[index].pathname)
-                    }
+                    if (bumpArr.length > 0) {
+                        var endId = bumpArr[0].pathname.substr(bumpArr[0].pathname.lastIndexOf('/') + 1);
+                        var arLen = bumpArr.length-1;
 
-                    if (i == count) bump(bumpSetOffers)
-                })
+                        for (let index = 0; index <= arLen; index++) {
+                            if (index == 0) getcsfr("https://bazar.lowcygier.pl/offer/update/" + endId)
+                            bumpSetOffers.add("https://bazar.lowcygier.pl" + bumpArr[index].pathname)
+                            if (index == arLen) {
+                                bump(bumpSetOffers)
+                            }
+                        }
+                        
+                    } else {
+                        // console.log("no more bump links");
+                    }
+                })                
                 .catch(err => console.log(err))
 
         }, interval * i, i);
+        
     }
 };
 
@@ -104,7 +113,6 @@ function parseKey(bd) {
     let res = document.createElement("div");
     res.innerHTML = bd;
     csrfKey = res.querySelector("#w0 > input[type=hidden]").value
-    return csrfKey;
 };
 
 function parseCountLinks(bd) {
